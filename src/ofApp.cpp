@@ -140,6 +140,12 @@ void ofApp::draw(){
     ofDrawCircle(bx, by, radius);	//円の描画
     ofSetColor(30, 200, 200); // 文字色を指定
 
+    //円の当たり判定
+    ofSetRectMode(OF_RECTMODE_CENTER);
+    ofNoFill();
+    ofSetColor(0, 255, 0);
+    ofDrawRectangle (bx ,by , radius*2 ,radius*2 );
+
 
     //オプションスイッチボタン切り替えの描画
     ofFill();
