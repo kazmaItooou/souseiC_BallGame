@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#define NUM 3
 
 class ofApp : public ofBaseApp{
 	public:
@@ -27,34 +26,19 @@ class ofApp : public ofBaseApp{
         float fh;
 
        //赤丸の変数
-        float bx[NUM];
-        float by[NUM];
-        float radius[NUM];
-        float bx_speed[NUM];
-        float by_speed[NUM];
-        int r[NUM],g[NUM],b[NUM];
+        float bx;
+        float by;
+        float radius;
+        float bx_speed;
+        float by_speed;
         //パドルの変数
         float rx;   //パドルの中心のx座標
         float ry;   //パドルの中心のy座標
         float rw;   //パドルの幅
         float rh;   //パドルの高さ
 
-        //障害壁の変数
-        float wall_x;   //障害壁の中心のx座標
-        float wall_y;   //障害壁の中心のy座標
-        float wall_w;   //障害壁の幅
-        float wall_h;   //障害壁の高さ
-        float wall_speed;//障害壁の速度
-        float wall_speed_flag;//障害壁の速度制限フラグ
-
         float x_shift;  //パドルのx移動速度
         float y_shift;  //パドルのy移動速度
-        int padhit=0;   //パドル得点
-
-        //ダメージの変数
-        int damage_flag=0;//ダメージフラグ
-        int damege_value=0;//ダメージの表示の長さ
-        int damage_color_flag=0;//ダメージカラーフラグ
 
         //オプションスイッチの場所と大きさ
         float optbx;
