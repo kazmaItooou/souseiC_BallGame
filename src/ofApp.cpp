@@ -95,19 +95,25 @@ void ofApp::update(){
 
 
 
+//--------------------------------------------------
+//パドルの横の当たり判定
     }else{
         if(((by-radius<=ry) && (by+radius>=ry))){//球の側面の上のyとしたのyの間にパドルの中心のy軸の中に入ったとき （球の側面の上のy <= パドルの中心のy軸 <=球の側面ののy）
             if(((bx+radius >= padleft_x)&& (bx+radius <= padleft_x+rw/3)&& (bx_speed)>0)){//パドル左の処理
+            //if(球の右のx >= パドルの左のx) && (球の左のx <= パドルの左のx+余分検知)　&& Ballのスピード>0)
+            if((bx+radius >= padleft_x)&& (bx+radius <= padleft_x+rw/3)&& (bx_speed)>0){//パドル左の処理
                 by_speed *= -1;
                 bx_speed *= -1;
             }
             if(((bx-radius <= padright_x)&& (bx-radius >= padright_x-rw/3))&& (bx_speed)<0){//パドル右の処理
+            //if(球の左のx >= パドルの右のx) && (球の右のx <= パドルの右のx+余分検知)　&& Ballのスピード<0)
+            if((bx-radius <= padright_x)&& (bx-radius >= padright_x-rw/3)&& (bx_speed)<0){//パドル右の処理
                 by_speed *= -1;
                 bx_speed *= -1;
             }
         }
     }
-
+//--------------------------------------------------
     //パドルの移動処理
     //x軸方向の移動範囲制限
    if (rx < 0+rw/2) {           //左端の制限
