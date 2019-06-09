@@ -79,10 +79,22 @@ void ofApp::update(){
     int padright_x=rx+rw/2;//パドルの右のx座標
 
     //パドル制限
+
+//    if(((padleft_x<bx+radius)&&(padright_x>bx-radius))){
+
+//        if( ((padover_y<by+radius)&&(padundr_y>by+radius)) ||
+//            ((padover_y<by-radius)&&(padundr_y>by-radius))){
+
+//        }
+//    }
+
     if((((padover_y<by+radius)&&(padundr_y>by+radius))&&((padleft_x<bx+radius)&&(padright_x>bx-radius)))//パドルの上に球があたったとき
            || (((padover_y<by-radius)&&(padundr_y>by-radius))&&((padleft_x<bx+radius)&&(padright_x>bx-radius)))//パドルの下に球があたったとき
             ){
         by_speed *= -1;
+
+
+
     }else{
         if(((by-radius<=ry) && (by+radius>=ry))){//球の側面の上のyとしたのyの間にパドルの中心のy軸の中に入ったとき （球の側面の上のy <= パドルの中心のy軸 <=球の側面ののy）
             if(((bx+radius >= padleft_x)&& (bx+radius <= padleft_x+rw/3)&& (bx_speed)>0)){//パドル左の処理
