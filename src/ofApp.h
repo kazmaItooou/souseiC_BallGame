@@ -31,6 +31,13 @@ class ofApp : public ofBaseApp{
         float radius;
         float bx_speed;
         float by_speed;
+
+       //赤丸の次の変数
+        float by_next;
+        float bx_next;
+
+        float before_bx;
+        float before_by;
         //パドルの変数
         float rx;   //パドルの中心のx座標
         float ry;   //パドルの中心のy座標
