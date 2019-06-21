@@ -7,4 +7,4 @@
 丸の当たり判定をきっちり取りたいのであれば円の接線の方程式をつかえばおそらく行ける？
 
 動画
-https://www.youtube.com/watch?v=50YOsn-bXB8&feature=youtu.be
+https://www.youtube.com/watch?v=t504tlsEy5c&feature=youtu.be
